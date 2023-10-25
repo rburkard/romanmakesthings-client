@@ -42,6 +42,9 @@ export default function FlowState() {
 				<p className="text-slate-600">~ {statement.author}</p>
 				<p className="text-slate-600">{statement.company}</p>
 			</div>
+			<a href="mailto:romanmakesthings@gmail.com?subject=Get Started with FlowState&body=Hi, how can I get started with FlowState? Best regards">
+				<Button title="Get started" onClick={() => {}}></Button>
+			</a>
 			<div>
 				<svg width={650 + 200} height={375 + 100}>
 					<path
