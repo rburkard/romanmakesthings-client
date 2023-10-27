@@ -14,7 +14,7 @@ export default function Home() {
 					muted
 				/>
 			</div>
-			<div className="flex relative justify-center items-center w-screen md:w-2/3 lg:w-1/2 -mt-24 z-10">
+			<div className="flex relative justify-center items-center w-screen md:w-2/3 lg:w-1/2 -mt-11 z-10">
 				<Image
 					className=""
 					width={300}
