@@ -1,25 +1,28 @@
 'use client';
 import Image from 'next/image';
 import {useEffect, useRef, useState} from 'react';
+import {ProfilePicture} from './profilePicture';
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center relative overflow-hidden">
-			<div className="flex relative w-screen max-w-lg">
+		<main className="flex min-h-screen flex-col md:flex-row items-center justify-center relative overflow-hidden bg-gray-300">
+			<div className="mx-16">
 				<video
-					className="transform -rotate-12 transition ease-in-out max-w-full"
-					src={'/intro-text.mov'}
+					className="z-10 hover:scale-110 transition ease-in-out cursor-pointer h-24"
+					src={'/about.mov'}
 					autoPlay
 					playsInline
 					muted
 				/>
 			</div>
-			<div className="flex relative justify-center items-center w-screen h-96 -mt-11 z-10">
-				<Image
-					className="object-contain"
-					fill
-					src={'/roman-on-floor.png'}
-					alt={'macbook lying on the floor'}
+			<ProfilePicture />
+			<div className="mx-16">
+				<video
+					className="z-10 hover:scale-110 transition ease-in-out cursor-pointer h-16"
+					src={'/projects.mov'}
+					autoPlay
+					playsInline
+					muted
 				/>
 			</div>
 		</main>
