@@ -13,7 +13,6 @@ export const ProfilePicture: FC = () => {
 					alt={'macbook lying on the floor'}
 				/>
 			</div>
-			<p>testing</p>
 			<Image
 				className="absolute object-contain z-10 drop-shadow-md"
 				fill

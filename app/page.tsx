@@ -6,7 +6,7 @@ import {ProfilePicture} from './profilePicture';
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col md:flex-row items-center justify-center relative overflow-hidden bg-gray-300">
-			<div className="mx-16">
+			{/* <div className="mx-16">
 				<video
 					className="z-10 hover:scale-110 transition ease-in-out cursor-pointer h-24"
 					src={'/about.mov'}
@@ -14,9 +14,9 @@ export default function Home() {
 					playsInline
 					muted
 				/>
-			</div>
+			</div> */}
 			<ProfilePicture />
-			<div className="mx-16">
+			{/* <div className="mx-16">
 				<video
 					className="z-10 hover:scale-110 transition ease-in-out cursor-pointer h-16"
 					src={'/projects.mov'}
@@ -24,7 +24,7 @@ export default function Home() {
 					playsInline
 					muted
 				/>
-			</div>
+			</div> */}
 		</main>
 	);
 }
