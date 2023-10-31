@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import {FC, useEffect, useRef, useState} from 'react';
 
-export const ProfilePicture: FC = () => {
+export const CenterPiece: FC<{
+	setAbout: (v: boolean) => void;
+	setProject: (v: boolean) => void;
+	setJob: (v: boolean) => void;
+}> = ({setAbout, setProject, setJob}) => {
 	const projectRef = useRef<HTMLVideoElement>(null);
 	const aboutRef = useRef<HTMLVideoElement>(null);
 	const jobRef = useRef<HTMLVideoElement>(null);
@@ -27,12 +31,13 @@ export const ProfilePicture: FC = () => {
 			<div
 				onMouseEnter={() => setHoverAbout(true)}
 				onMouseLeave={() => setHoverAbout(false)}
+				onClick={() => setAbout(true)}
 				className="flex absolute w-28 h-80 z-30 hover:scale-110 transition ease-in-out cursor-pointer"
 			>
 				<Image
 					className="object-contain drop-shadow-md"
 					fill
-					src={'/roman-with-shadow.png'}
+					src={'/roman-on-floor.png'}
 					alt={'macbook lying on the floor'}
 				/>
 				{hoverAbout && (
@@ -49,6 +54,7 @@ export const ProfilePicture: FC = () => {
 			<div
 				onMouseEnter={() => setHoverProject(true)}
 				onMouseLeave={() => setHoverProject(false)}
+				onClick={() => setProject(true)}
 				className="flex absolute w-36 h-32 z-30 transform -mr-52 -mb-52 hover:scale-110 transition ease-in-out cursor-pointer"
 			>
 				<Image
@@ -71,6 +77,7 @@ export const ProfilePicture: FC = () => {
 			<div
 				onMouseEnter={() => setHoverJob(true)}
 				onMouseLeave={() => setHoverJob(false)}
+				onClick={() => setJob(true)}
 				className="flex absolute w-16 h-16 z-30 transform rotate-12 -ml-52 -mb-72 hover:scale-110 transition ease-in-out cursor-pointer"
 			>
 				<Image
