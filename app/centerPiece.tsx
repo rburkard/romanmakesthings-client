@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import {FC, useEffect, useRef, useState} from 'react';
+import useIsMobile from './provider';
 
 export const CenterPiece: FC<{
 	setAbout: (v: boolean) => void;
@@ -13,6 +14,8 @@ export const CenterPiece: FC<{
 	const [hoverProject, setHoverProject] = useState(false);
 	const [hoverAbout, setHoverAbout] = useState(false);
 	const [hoverJob, setHoverJob] = useState(false);
+
+	const isMobile = useIsMobile();
 
 	useEffect(() => {
 		if (hoverProject && projectRef.current) {
@@ -40,12 +43,12 @@ export const CenterPiece: FC<{
 					src={'/roman-on-floor.png'}
 					alt={'macbook lying on the floor'}
 				/>
-				{hoverAbout && (
+				{(hoverAbout || isMobile) && (
 					<video
 						ref={aboutRef}
-						className="z-40 h-24  -mt-24"
+						className="z-40 h-24 -mt-24"
 						src={'/about.mov'}
-						autoPlay={false}
+						autoPlay
 						playsInline
 						muted
 					/>
@@ -63,7 +66,7 @@ export const CenterPiece: FC<{
 					src={'/backpack.png'}
 					alt={'backpack lying on the floor'}
 				/>
-				{hoverProject && (
+				{(hoverProject || isMobile) && (
 					<video
 						ref={projectRef}
 						className=" mt-28 z-40 h-24"
@@ -86,7 +89,7 @@ export const CenterPiece: FC<{
 					src={'/slippers.png'}
 					alt={'macbook lying on the floor'}
 				/>
-				{hoverJob && (
+				{(hoverJob || isMobile) && (
 					<video
 						ref={jobRef}
 						className="z-40 h-24 mt-12"
