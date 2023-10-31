@@ -3,15 +3,7 @@ import Image from 'next/image';
 import {createContext, useContext, useEffect, useRef, useState} from 'react';
 import {MOBILE_BREAKPOINT_N} from './constants';
 import {CenterPiece} from './centerPiece';
-
-export function useIsMobile() {
-	const dataView = useContext(IsMobile);
-	return dataView;
-}
-
-const IsMobile = createContext<boolean>(false);
-
-IsMobile.displayName = 'IsMobile';
+import {IsMobile} from './provider';
 
 export default function Home() {
 	const [isMobile, setIsMobile] = useState<boolean>();
