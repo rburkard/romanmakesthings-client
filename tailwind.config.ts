@@ -23,9 +23,14 @@ const config: Config = {
 				draw: {
 					'100%': {strokeDashoffset: '0'},
 				},
+				opacity: {
+					'0%': {opacity: '0'},
+					'100%': {opacity: '1'},
+				},
 			},
 			animation: {
 				'draw-graph': 'draw 4s linear forwards',
+				appear: 'opacity 1s linear forwards',
 			},
 		},
 	},

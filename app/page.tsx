@@ -41,9 +41,12 @@ export default function Home() {
 		<IsMobile.Provider value={!!isMobile}>
 			<Scaffold>
 				<main
-					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden`}
+					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden `}
 					onClick={handleMainClick}
 				>
+					{about && <About />}
+					{project && <Projects />}
+					{job && <Current />}
 					<div
 						className={`absolute transition-all ease-in-out duration-700
 					${!about && !project && !job && 'transform: translate-x-0 translate-y-0'}
@@ -61,9 +64,6 @@ export default function Home() {
 							setProject={setProject}
 						/>
 					</div>
-					{about && <About />}
-					{project && <Projects />}
-					{job && <Current />}
 				</main>
 			</Scaffold>
 		</IsMobile.Provider>
