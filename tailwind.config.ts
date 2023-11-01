@@ -7,7 +7,13 @@ const config: Config = {
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		fontFamily: {
+			monospace: 'Courier New',
+		},
 		extend: {
+			colors: {
+				bottomBar: '#2B3E42',
+			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic':

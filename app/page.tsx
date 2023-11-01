@@ -5,6 +5,9 @@ import {MOBILE_BREAKPOINT_N} from './constants';
 import {CenterPiece} from './centerPiece';
 import {IsMobile} from './provider';
 import {Scaffold} from './scaffold';
+import {About} from './views/about';
+import {Projects} from './views/projects';
+import {Current} from './views/current';
 
 export default function Home() {
 	const [isMobile, setIsMobile] = useState<boolean>();
@@ -38,13 +41,13 @@ export default function Home() {
 		<IsMobile.Provider value={!!isMobile}>
 			<Scaffold>
 				<main
-					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden bg-gray-300`}
+					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden`}
+					onClick={handleMainClick}
 				>
 					<div
-						onClick={handleMainClick}
 						className={`absolute transition-all ease-in-out duration-700
 					${!about && !project && !job && 'transform: translate-x-0 translate-y-0'}
-					${about && ' transform:  translate-y-full'} 
+					${about && ' transform: translate-y-full'} 
 					${project && 'transform: -translate-y-full -translate-x-24'}
 					${job && 'transform: -translate-y-full translate-x-24'}
 					`}
@@ -58,6 +61,9 @@ export default function Home() {
 							setProject={setProject}
 						/>
 					</div>
+					{about && <About />}
+					{project && <Projects />}
+					{job && <Current />}
 				</main>
 			</Scaffold>
 		</IsMobile.Provider>

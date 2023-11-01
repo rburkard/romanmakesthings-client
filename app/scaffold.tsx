@@ -8,32 +8,32 @@ import {
 
 export const Scaffold: FC<{children: ReactNode}> = ({children}) => {
 	return (
-		<div className="flex flex-col bg-gray-300 h-screen overflow-hidden">
+		<div className="flex flex-col bg-white h-screen overflow-hidden">
 			{children}
-			<div className="flex justify-center items-center gap-5 bottom-0 fixed w-full h-12 border-black border-2 bg-black">
+			<div className="flex justify-center items-center gap-5 bottom-0 fixed w-full h-12 bg-bottomBar">
+				<a href="mailto:romanmakesthings@gmail.com">
+					<AiOutlineMail size={24} />
+				</a>
 				<a
 					href="https://github.com/rburkard"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<AiOutlineGithub />
+					<AiOutlineGithub size={24} />
 				</a>
 				<a
 					href="https://www.linkedin.com/in/rburkard"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<AiOutlineLinkedin />
+					<AiOutlineLinkedin size={24} />
 				</a>
 				<a
 					href="https://twitter.com/RomanMakes3000"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<AiOutlineTwitter />
-				</a>
-				<a href="mailto:romanmakesthings@gmail.com">
-					<AiOutlineMail />
+					<AiOutlineTwitter size={24} />
 				</a>
 			</div>
 		</div>
