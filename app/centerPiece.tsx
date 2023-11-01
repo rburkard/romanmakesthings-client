@@ -6,7 +6,10 @@ export const CenterPiece: FC<{
 	setAbout: (v: boolean) => void;
 	setProject: (v: boolean) => void;
 	setJob: (v: boolean) => void;
-}> = ({setAbout, setProject, setJob}) => {
+	about: boolean;
+	project: boolean;
+	job: boolean;
+}> = ({about, project, job, setAbout, setProject, setJob}) => {
 	const projectRef = useRef<HTMLVideoElement>(null);
 	const aboutRef = useRef<HTMLVideoElement>(null);
 	const jobRef = useRef<HTMLVideoElement>(null);
@@ -47,7 +50,7 @@ export const CenterPiece: FC<{
 					<video
 						ref={aboutRef}
 						className="z-40 h-24 -mt-24"
-						src={'/about.mov'}
+						src={'/about2.mov'}
 						autoPlay
 						playsInline
 						muted
@@ -69,8 +72,8 @@ export const CenterPiece: FC<{
 				{(hoverProject || isMobile) && (
 					<video
 						ref={projectRef}
-						className=" mt-28 z-40 h-24"
-						src={'/projects.mov'}
+						className="mt-28 z-40 h-24"
+						src={'/projects2.mov'}
 						autoPlay
 						playsInline
 						muted
@@ -92,8 +95,8 @@ export const CenterPiece: FC<{
 				{(hoverJob || isMobile) && (
 					<video
 						ref={jobRef}
-						className="z-40 h-24 mt-12"
-						src={'/about.mov'}
+						className="z-40 h-24 mt-8"
+						src={'/current2.mov'}
 						autoPlay
 						playsInline
 						muted
