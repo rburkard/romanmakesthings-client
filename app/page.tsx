@@ -42,12 +42,12 @@ export default function Home() {
 			<Scaffold>
 				<main
 					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden `}
-					onClick={handleMainClick}
 				>
 					{about && <About />}
 					{project && <Projects />}
 					{job && <Current />}
 					<div
+						onClick={handleMainClick}
 						className={`absolute transition-all ease-in-out duration-700
 					${!about && !project && !job && 'transform: translate-x-0 translate-y-0'}
 					${about && ' transform: translate-y-full'} 
