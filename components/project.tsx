@@ -5,23 +5,22 @@ import {FC} from 'react';
 export const ProjectComponent: FC<{project: Project}> = ({project}) => {
 	const isMobile = useIsMobile();
 	return (
-		<div className="flex flex-col relative w-full text-sm h-96  sm:flex-row max-w-2xl gap-4 font-monospace text-black pt-16 animate-appear">
+		<div className="flex relative w-full p-9 text-sm h-96  sm:max-w-2xl gap-4 font-monospace text-black pt-16 animate-appear">
 			<video
-				className="h-full sm:h-72"
+				className="h-44 sm:h-full"
 				src={project.videoSrc}
 				autoPlay
 				playsInline
 				muted
 				loop
 			/>
-			{!isMobile && (
-				<div className="flex flex-col w-full h-full gap-4 p-2">
-					<p>{project.description}</p>
-					<p>{project.frontend}</p>
-					<p>{project.backend}</p>
-					<p>{project.design}</p>
-				</div>
-			)}
+
+			<div className="flex flex-col w-full h-full gap-4 text-xs sm:text-sm">
+				<p>{project.description}</p>
+				<p>{project.frontend}</p>
+				<p>{project.backend}</p>
+				<p>{project.design}</p>
+			</div>
 		</div>
 	);
 };
