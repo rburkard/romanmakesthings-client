@@ -46,7 +46,7 @@ export const CenterPiece: FC<{
 					src={'/roman-on-floor.png'}
 					alt={'macbook lying on the floor'}
 				/>
-				{(hoverAbout || isMobile) && !about && (
+				{(hoverAbout || isMobile || about) && (
 					<video
 						ref={aboutRef}
 						className="z-40 h-24 -mt-24"
@@ -69,7 +69,7 @@ export const CenterPiece: FC<{
 					src={'/backpack.png'}
 					alt={'backpack lying on the floor'}
 				/>
-				{(hoverProject || isMobile) && !project && (
+				{(hoverProject || isMobile || project) && (
 					<video
 						ref={projectRef}
 						className="mt-28 z-40 h-24"
@@ -92,7 +92,7 @@ export const CenterPiece: FC<{
 					src={'/slippers.png'}
 					alt={'macbook lying on the floor'}
 				/>
-				{(hoverJob || isMobile) && !job && (
+				{(hoverJob || isMobile || job) && (
 					<video
 						ref={jobRef}
 						className="z-40 h-24 mt-8"

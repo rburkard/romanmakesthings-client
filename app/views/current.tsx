@@ -2,6 +2,6 @@ import {FC} from 'react';
 
 export const Current: FC<{}> = () => {
 	return (
-		<div className="flex relative justify-center items-center w-64 h-96 border-black border-2"></div>
+		<div className="flex flex-col relative w-full text-sm md:max-w-md h-96  gap-4 font-monospace text-black p-9"></div>
 	);
 };
