@@ -2,7 +2,7 @@ import {FC} from 'react';
 
 export const Current: FC<{}> = () => {
 	return (
-		<div className="flex flex-col relative w-full text-sm sm:max-w-md h-96  gap-4 font-monospace text-black p-9 pt-24 text-center animate-appear">
+		<div className="flex flex-col relative w-full text-sm sm:max-w-md h-96  gap-4 font-monospace text-black p-9 pt-24 text-center animate-appear opacity-0">
 			<p>
 				Currenly I am looking for new opportunities at the intersection of
 				digital products and coding. Interested in working with me?

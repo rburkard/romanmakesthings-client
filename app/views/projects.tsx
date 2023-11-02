@@ -16,7 +16,7 @@ export const Projects: FC<{}> = () => {
 			videoSrc: '/projects/flowstate.mp4',
 			title: 'Flow State',
 			description:
-				'Flow State is my newest venture - it helps programmers to discover their most productive hours in the day. Additionaly it helps to stay in the flow by pausing notifications if a high productivity is detected.',
+				'Flow State is my newest venture - it helps programmers to discover their most productive hours in the day. Additionaly it helps to stay in the flow by pausing notifications if high productivity is detected.',
 			frontend: 'Frontend using NextJS, React, Typescript and TailwindCSS',
 			backend:
 				'Backend using NodeJS, Typescript, Express, Google Cloud Run and Firestore',
@@ -79,7 +79,7 @@ export const Projects: FC<{}> = () => {
 
 	return (
 		<div
-			className="flex relative flex-col overflow-y-auto justify-center items-center max-h-96 animate-appear cursor-pointer"
+			className="flex relative flex-col overflow-y-auto justify-center items-center max-h-96 animate-appear cursor-pointer opacity-0"
 			onClick={() => setCurrentProject(updateProject)}
 		>
 			<ProjectComponent

@@ -30,7 +30,7 @@ const config: Config = {
 			},
 			animation: {
 				'draw-graph': 'draw 4s linear forwards',
-				appear: 'opacity 1s linear forwards',
+				appear: 'opacity 1s linear 0.5s forwards',
 			},
 		},
 	},
