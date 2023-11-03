@@ -86,6 +86,8 @@ export const Projects: FC<{}> = () => {
 				key={projects[currentProject].title}
 				project={projects[currentProject]}
 			/>
+
+			
 		</div>
 	);
 };
