@@ -41,7 +41,7 @@ export default function Home() {
 		<IsMobile.Provider value={!!isMobile}>
 			<Scaffold>
 				<main
-					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden `}
+					className={`flex min-h-full flex-col md:flex-row items-center justify-center relative overflow-hidden bg-gray-200`}
 				>
 					{about && <About />}
 					{project && <Projects />}
