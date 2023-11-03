@@ -16,7 +16,7 @@ export const Projects: FC<{}> = () => {
 			videoSrc: '/projects/flowstate.mp4',
 			title: 'Flow State',
 			description:
-				'Flow State is my newest venture - it helps programmers to discover their most productive hours in the day. Additionaly it helps to stay in the flow by pausing notifications if high productivity is detected.',
+				'Flow State is the newest venture - it helps programmers to discover their most productive hours in the day. Additionaly it helps to stay in the flow by pausing notifications if high productivity is detected.',
 			frontend: 'Frontend using NextJS, React, Typescript and TailwindCSS',
 			backend:
 				'Backend using NodeJS, Typescript, Express, Google Cloud Run and Firestore',

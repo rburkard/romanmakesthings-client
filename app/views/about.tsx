@@ -9,7 +9,7 @@ export const About: FC<{}> = () => {
 			<p>
 				I am Roman - a creative developer based in wonderful Zurich Switzerland.
 				I specialize in ideating and building digital products since more than 6
-				years.
+				years. Since 3 years I also build them myself in React and Typescript.
 			</p>
 			<p>
 				Sometimes the leap is as small as reducing the waiting time at the local
