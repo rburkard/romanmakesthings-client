@@ -3,7 +3,7 @@ import {FC} from 'react';
 
 export const About: FC<{}> = () => {
 	return (
-		<div className="flex flex-col relative w-full text-sm sm:max-w-md h-96  gap-4 font-monospace text-black p-9 mb-16 animate-appear opacity-0">
+		<div className="flex flex-col relative w-full text-xs h-96 sm:max-w-md sm:text-sm  gap-4 font-monospace text-black p-9 mb-16 animate-appear opacity-0">
 			<p>Is anybody reading this?</p>
 			<p>Okok, here are some infos about me...</p>
 			<p>
