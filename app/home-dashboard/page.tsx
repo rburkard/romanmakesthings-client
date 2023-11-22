@@ -57,7 +57,7 @@ export default function HomeDashboard() {
 					date.getMonth() + 1
 				}.${date.getFullYear()}`}</p>
 				<Button
-					title={'+'}
+					title={'Next Day'}
 					onClick={() => {
 						const newDate = addDays(date, 1);
 						return setDate(newDate);
