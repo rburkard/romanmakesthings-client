@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.8.1",
+    "date-fns": "^2.30.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
