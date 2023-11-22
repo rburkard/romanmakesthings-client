@@ -23,6 +23,7 @@ export default function HomeDashboard() {
 		event.preventDefault();
 		setDisabled(true);
 
+		console.log('apikey', process.env.NEXT_PUBLIC_API_KEY);
 		const dateString = convertDate(date);
 		const response = await fetch(url, {
 			method: 'POST', // *GET, POST, PUT, DELETE, etc.
