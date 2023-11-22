@@ -10,6 +10,7 @@ import {Scaffold} from '../scaffold';
 import {FC} from 'react';
 
 export default function Dashboard() {
+	return <p></p>;
 	return (
 		<Scaffold>
 			<DashboardContent />
