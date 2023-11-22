@@ -34,6 +34,10 @@ export default function HomeDashboard() {
 			body: JSON.stringify({date, task}), // body data type must match "Content-Type" header
 		});
 
+		if (response.ok) {
+			setTask('');
+		}
+
 		setDisabled(false);
 	};
 
