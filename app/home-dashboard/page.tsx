@@ -5,13 +5,7 @@ import {generateTags} from '@/functions/generateTags';
 import {useState} from 'react';
 import {addDays} from 'date-fns';
 
-const convertDate = (date: Date) => {
-	const today = date;
-	return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`; // yyyy-mm-dd
-};
-
 export default function HomeDashboard() {
-	const [day, setDay] = useState<Array<string>>([]);
 	const url =
 		'https://project-server-6p2zykct3q-ew.a.run.app/dashboard-adding-task';
 
@@ -20,10 +14,16 @@ export default function HomeDashboard() {
 
 	const [disabled, setDisabled] = useState(false);
 
+	const convertDate = (date: Date) => {
+		const today = date;
+		return `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`; // yyyy-mm-dd
+	};
+
 	const submit = async (event: React.FormEvent<HTMLButtonElement>) => {
 		event.preventDefault();
 		setDisabled(true);
 
+		const dateString = convertDate(date);
 		const response = await fetch(url, {
 			method: 'POST', // *GET, POST, PUT, DELETE, etc.
 			headers: {
@@ -31,7 +31,7 @@ export default function HomeDashboard() {
 				'x-api-key': String(process.env.NEXT_PUBLIC_API_KEY),
 				// 'Content-Type': 'application/x-www-form-urlencoded',
 			},
-			body: JSON.stringify({date, task}), // body data type must match "Content-Type" header
+			body: JSON.stringify({date: dateString, task}), // body data type must match "Content-Type" header
 		});
 
 		if (response.ok) {
