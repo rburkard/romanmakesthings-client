@@ -65,7 +65,7 @@ export default function HomeDashboard() {
 					}}
 				/>
 			</div>
-			<Button title={'Add Task'} onClick={submit} />
+			<Button title={disabled ? 'Sending...' : 'Add Task'} onClick={submit} />
 		</main>
 	);
 }
